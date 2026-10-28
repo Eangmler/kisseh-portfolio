@@ -32,6 +32,23 @@
 =================================================== -->
 <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
   <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+  <div class="mobile-theme-bar">
+    <span class="mobile-theme-label">Appearance</span>
+    <div class="apple-theme-segmented" role="radiogroup" aria-label="Mobile theme selection">
+      <button class="theme-seg-btn active" data-theme-val="dark" title="Dark theme (Cinema Black)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span>Dark</span>
+      </button>
+      <button class="theme-seg-btn" data-theme-val="light" title="Light theme (Apple White)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span>Light</span>
+      </button>
+      <button class="theme-seg-btn" data-theme-val="auto" title="Match system appearance">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>Auto</span>
+      </button>
+    </div>
+  </div>
   <a href="#work">Work</a>
   <a href="#about">About</a>
   <a href="#services">Capabilities</a>
@@ -61,6 +78,21 @@
   </ul>
 
   <div class="nav-cta">
+    <!-- Apple Segmented Theme Switcher (Dark / Light / Auto) -->
+    <div class="apple-theme-segmented" role="radiogroup" aria-label="Theme selector">
+      <button class="theme-seg-btn active" data-theme-val="dark" aria-label="Dark mode (Cinema Black)" title="Cinema Black (Default)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span>Dark</span>
+      </button>
+      <button class="theme-seg-btn" data-theme-val="light" aria-label="Light mode (Apple White)" title="Apple Light Canvas">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span>Light</span>
+      </button>
+      <button class="theme-seg-btn" data-theme-val="auto" aria-label="Match system appearance" title="Match System Appearance">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>Auto</span>
+      </button>
+    </div>
     <a href="#contact" class="btn btn-blue nav-cta-btn">Collaborate ↗</a>
   </div>
 
@@ -70,7 +102,7 @@
 </header>
 
 <!-- ===================================================
-     HERO (APPLE PRO MARQUEE SHOWCASE)
+     HERO (APPLE TV+ STREAMLINED SHOWCASE)
 =================================================== -->
 <section id="hero" aria-label="Introduction">
   <!-- Dynamic Ambient YouTube Reel Background -->
@@ -89,52 +121,44 @@
   <div class="hero-film-scanline"></div>
   <div class="hero-noise"></div>
 
-  <div class="hero-content">
-    <!-- Sound Status & Toggle Pill (Apple Pro Glass) -->
-    <div class="hero-sound-pill fade-up" id="heroSoundPill" title="Click empty space on hero to toggle sound">
-      <div class="sound-wave-bars muted" id="soundWaveIcon">
-        <span></span><span></span><span></span>
-      </div>
-      <span class="sound-text">Ambient Reel Audio</span>
+  <div class="hero-content apple-hero-content">
+    <!-- Apple Floating Badges (Reference: Apple TV+ Hero) -->
+    <div class="apple-hero-badges fade-up">
+      <span class="apple-hero-pill-badge">
+        <span class="status-pulse-dot"></span>
+        <span>Ernest Kisseh</span>
+      </span>
+      <span class="apple-hero-pill-secondary">Film Direction &amp; Cinema</span>
     </div>
 
-    <!-- Apple Marquee Eyebrow Badge -->
-    <div class="hero-status-tag fade-up">
-      <span class="status-pulse-dot"></span>
-      <span class="status-tag-text">DIRECTING · FILMMAKING · ACCRA &amp; WORLDWIDE</span>
-    </div>
-
-    <!-- Apple Two-Tone Headline Hierarchy -->
-    <h1 class="hero-name fade-up">
-      <span class="headline-bold">Kisseh.</span><br>
-      <span class="headline-muted">Stories that command real attention.</span>
+    <!-- Apple Controlled Restrained Headline Scale -->
+    <h1 class="hero-name apple-hero-headline fade-up">
+      Stories that command real attention.
     </h1>
 
-    <div class="hero-sub fade-up">
-      <p class="hero-roles">
-        Creative Director
-        <span>·</span>
-        Filmmaker
-        <span>·</span>
-        Visual Storyteller
-        <span>·</span>
-        Digital Strategist
-      </p>
-    </div>
-
-    <p class="hero-location fade-up" style="margin-top:1.2rem; font-family: var(--sans); font-size: 0.88rem; color: var(--apple-text-secondary); max-width:58ch; line-height:1.6;">
-      <strong>Ernest Kisseh-Angmler</strong> directs culture-defining documentaries, commercial cinema, and narrative brand systems across Africa and globally.
+    <p class="apple-hero-subtitle fade-up">
+      Culture-defining documentaries, commercial cinema &amp; narrative brand systems.
     </p>
 
-    <div class="hero-cta fade-up">
-      <a href="#work" class="btn btn-primary">
-        <span>Explore Selected Works</span>
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
-      </a>
-      <a href="#contact" class="btn btn-outline">
-        <span>Work with Ernest</span>
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-      </a>
+    <!-- Apple Action Buttons & Video Controls in a clean balanced row -->
+    <div class="apple-hero-actions-bar fade-up">
+      <div class="hero-cta">
+        <a href="#work" class="apple-btn apple-btn-white">Explore Works</a>
+        <a href="#contact" class="apple-btn apple-btn-glass">Work with Ernest ↗</a>
+      </div>
+
+      <div class="apple-video-controls">
+        <button id="appleSoundBtn" class="apple-ctrl-pill" title="Toggle reel sound">
+          <span class="apple-sound-bars muted" id="appleSoundBars">
+            <span></span><span></span><span></span>
+          </span>
+          <span id="appleSoundStatus">Audio Off</span>
+        </button>
+        <button id="applePauseBtn" class="apple-ctrl-circle" aria-label="Pause background video" title="Pause / Play background video">
+          <svg id="applePauseIcon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+          <svg id="applePlayIcon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </button>
+      </div>
     </div>
 
     <!-- FAST SLIDE COLLAGE BLOCK -->
@@ -1127,6 +1151,7 @@
           id="contactForm"
           name="contact"
           method="POST"
+          action="https://formsubmit.co/thekisseh@gmail.com"
           data-netlify="true"
           netlify-honeypot="bot-field"
           aria-label="Contact form"
@@ -1136,6 +1161,10 @@
             <label>Don't fill this out: <input name="bot-field"></label>
           </p>
           <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="_subject" value="New Creative Inquiry from kisseh.netlify.app">
+          <input type="hidden" name="_cc" value="ernestangmler144@gmail.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
 
           <div class="form-group">
             <label for="name">Your Name</label>

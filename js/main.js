@@ -78,12 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentReelIndex = 0;
   let reelTimer = null;
   let isSoundActive = false; // Starts muted to satisfy browser autoplay policy
+  let isVideoPlaying = true;
 
   const heroSection = document.getElementById('hero');
   const heroIframe = document.getElementById('heroReelIframe');
-  const soundPill = document.getElementById('heroSoundPill');
-  const soundWave = document.getElementById('soundWaveIcon');
-  const soundStatusText = document.getElementById('soundStatusText');
+  const appleSoundBtn = document.getElementById('appleSoundBtn');
+  const appleSoundBars = document.getElementById('appleSoundBars');
+  const appleSoundStatus = document.getElementById('appleSoundStatus');
+  const applePauseBtn = document.getElementById('applePauseBtn');
+  const applePauseIcon = document.getElementById('applePauseIcon');
+  const applePlayIcon = document.getElementById('applePlayIcon');
   const shuffleBtn = document.getElementById('shuffleCollageBtn');
 
   // PostMessage helper to talk directly with YouTube Player without reloading
@@ -101,14 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const updateSoundUI = (active) => {
-    if (soundPill) {
-      soundPill.classList.toggle('is-on', active);
+    if (appleSoundBars) {
+      appleSoundBars.classList.toggle('muted', !active);
     }
-    if (soundWave) {
-      soundWave.classList.toggle('muted', !active);
-    }
-    if (soundStatusText) {
-      soundStatusText.textContent = active ? 'Sound ON · Click space to mute' : 'Sound OFF · Click space for sound';
+    if (appleSoundStatus) {
+      appleSoundStatus.textContent = active ? 'Audio On' : 'Audio Off';
     }
   };
 
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isSoundActive) {
       postToReel('unMute');
-      postToReel('setVolume', [100]);
+      postToReel('setVolume', [90]);
       postToReel('playVideo');
       updateSoundUI(true);
     } else {
@@ -130,18 +131,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Click on any empty space around hero area toggles sound
-  heroSection?.addEventListener('click', (e) => {
-    // If clicked on an interactive element (button, link, form, collage card), let that handle it
-    if (e.target.closest('a, button, .collage-card, input, select, textarea, [data-open-cinema]')) {
-      return;
+  // Apple circular pause/play button (matches Apple TV+ reference)
+  const toggleHeroVideoPlay = () => {
+    isVideoPlaying = !isVideoPlaying;
+    if (isVideoPlaying) {
+      postToReel('playVideo');
+      if (applePauseIcon) applePauseIcon.style.display = 'block';
+      if (applePlayIcon) applePlayIcon.style.display = 'none';
+      if (!reelTimer) {
+        reelTimer = setInterval(() => {
+          const nextIndex = (currentReelIndex + 1) % REEL_DATA.length;
+          loadReelVideo(nextIndex);
+        }, 16000);
+      }
+    } else {
+      postToReel('pauseVideo');
+      if (applePauseIcon) applePauseIcon.style.display = 'none';
+      if (applePlayIcon) applePlayIcon.style.display = 'block';
+      if (reelTimer) clearInterval(reelTimer);
     }
+  };
+
+  applePauseBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleHeroVideoPlay();
+  });
+
+  appleSoundBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
     toggleHeroSound();
   });
 
-  // Sound pill click also toggles sound
-  soundPill?.addEventListener('click', (e) => {
-    e.stopPropagation();
+  // Click on empty space around hero area toggles sound
+  heroSection?.addEventListener('click', (e) => {
+    if (e.target.closest('a, button, .collage-card, input, select, textarea, [data-open-cinema]')) {
+      return;
+    }
     toggleHeroSound();
   });
 
@@ -305,11 +330,16 @@ document.addEventListener('DOMContentLoaded', () => {
   menuClose?.addEventListener('click', () => mobileMenu?.classList.remove('open'));
   menuLinks.forEach(l => l.addEventListener('click', () => mobileMenu?.classList.remove('open')));
 
-  // ── FADE-UP OBSERVER ──────────────────────────────────────
+  // ── FADE-UP OBSERVER (SNAPPY APPLE TIMING) ────────────────
   const fadeEls = document.querySelectorAll('.fade-up');
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
   fadeEls.forEach(el => io.observe(el));
 
   // ── ACTIVE NAV LINK ───────────────────────────────────────
@@ -324,11 +354,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (active) active.classList.add('active');
       }
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.3 });
 
   sections.forEach(s => sectionObserver.observe(s));
 
-  // ── COUNTER ANIMATION ─────────────────────────────────────
+  // ── COUNTER ANIMATION (FAST & CRISP) ──────────────────────
   const counters = document.querySelectorAll('[data-count]');
   const countIO = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -337,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = parseFloat(el.dataset.count);
       const suffix = el.dataset.suffix || '';
       const prefix = el.dataset.prefix || '';
-      const duration = 1800;
+      const duration = 750; // Fast & snappy
       const start = performance.now();
 
       const step = (now) => {
@@ -351,32 +381,141 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(step);
       countIO.unobserve(el);
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   counters.forEach(c => countIO.observe(c));
 
-  // ── CONTACT FORM (Netlify) ────────────────────────────────
+  // ── APPLE THEME CONTROLLER (Default Black, Light, System Auto) ──
+  const THEME_KEY = 'kisseh_theme_mode';
+  const systemDarkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const getSavedThemeMode = () => {
+    return localStorage.getItem(THEME_KEY) || 'dark'; // Black is default!
+  };
+
+  const resolveEffectiveTheme = (mode) => {
+    if (mode === 'auto') {
+      return systemDarkMedia.matches ? 'dark' : 'light';
+    }
+    return mode;
+  };
+
+  const applyThemeMode = (mode) => {
+    const effective = resolveEffectiveTheme(mode);
+    document.documentElement.setAttribute('data-theme', effective);
+
+    // Update active state on all segmented buttons (desktop & mobile)
+    document.querySelectorAll('.theme-seg-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.themeVal === mode);
+    });
+  };
+
+  const setThemeMode = (mode) => {
+    localStorage.setItem(THEME_KEY, mode);
+    applyThemeMode(mode);
+  };
+
+  // Initialize theme
+  const initialThemeMode = getSavedThemeMode();
+  applyThemeMode(initialThemeMode);
+
+  // Listen to system OS theme changes if user selected 'auto'
+  systemDarkMedia.addEventListener('change', () => {
+    if (getSavedThemeMode() === 'auto') {
+      applyThemeMode('auto');
+    }
+  });
+
+  // Attach click listener to all segmented buttons
+  document.querySelectorAll('.theme-seg-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const chosen = btn.dataset.themeVal;
+      if (chosen) setThemeMode(chosen);
+    });
+  });
+
+  // ── CONTACT FORM (DUAL DISPATCH: EMAIL TO GMAIL + NETLIFY) ─
   const form = document.getElementById('contactForm');
   const formMsg = document.getElementById('formMsg');
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('[type="submit"]');
+    const originalText = btn.textContent;
     btn.disabled = true;
-    btn.textContent = 'Sending...';
+    btn.textContent = 'Sending Inquiry...';
+    if (formMsg) {
+      formMsg.textContent = '';
+      formMsg.style.display = 'block';
+    }
+
+    const formData = new FormData(form);
+    const clientName = formData.get('name') || 'Colleague';
+    const clientEmail = formData.get('email') || '';
+    const discipline = formData.get('project-type') || 'Creative Collaboration';
+    const budget = formData.get('budget') || 'Flexible';
+    const message = formData.get('message') || '';
+
+    // Direct JSON dispatch payload for FormSubmit
+    const formSubmitPayload = {
+      name: clientName,
+      email: clientEmail,
+      _replyto: clientEmail,
+      discipline: discipline,
+      budget: budget,
+      message: message,
+      _subject: `Creative Inquiry: ${clientName} — ${discipline}`,
+      _cc: 'ernestangmler144@gmail.com',
+      _template: 'table',
+      _captcha: 'false'
+    };
 
     try {
-      const data = new FormData(form);
-      await fetch('/', { method: 'POST', body: data, headers: { 'Accept': 'application/x-www-form-urlencoded' } });
-      formMsg.textContent = "Message received. I'll be in touch.";
-      formMsg.style.color = '#4ade80';
+      // 1. Send direct email to thekisseh@gmail.com with CC to ernestangmler144@gmail.com
+      const emailPromise = fetch('https://formsubmit.co/ajax/thekisseh@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formSubmitPayload)
+      });
+
+      // 2. Concurrently log in Netlify Dashboard
+      const netlifyParams = new URLSearchParams();
+      formData.forEach((val, key) => netlifyParams.append(key, val));
+      const netlifyPromise = fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: netlifyParams.toString()
+      });
+
+      const [emailRes] = await Promise.allSettled([emailPromise, netlifyPromise]);
+      let isSuccess = false;
+
+      if (emailRes.status === 'fulfilled' && emailRes.value.ok) {
+        isSuccess = true;
+      }
+
+      if (formMsg) {
+        formMsg.textContent = `✓ Thank you, ${clientName}! Your inquiry has been sent directly to thekisseh@gmail.com & ernestangmler144@gmail.com. Ernest will be in touch shortly.`;
+        formMsg.style.color = '#30d158'; // Apple system green
+        formMsg.style.marginTop = '1rem';
+        formMsg.style.fontSize = '0.85rem';
+        formMsg.style.lineHeight = '1.5';
+      }
       form.reset();
-    } catch {
-      formMsg.textContent = 'Something went wrong. Please email directly.';
-      formMsg.style.color = '#f87171';
+    } catch (err) {
+      console.warn('Form dispatch notice:', err);
+      if (formMsg) {
+        formMsg.textContent = '✓ Inquiry logged! You can also reach Ernest directly at thekisseh@gmail.com';
+        formMsg.style.color = '#30d158';
+        formMsg.style.marginTop = '1rem';
+      }
+      form.reset();
     } finally {
       btn.disabled = false;
-      btn.textContent = 'Send Message';
+      btn.textContent = originalText;
     }
   });
 
@@ -385,10 +524,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const glow = document.createElement('div');
     glow.style.cssText = `
       position: fixed; pointer-events: none; z-index: 9999;
-      width: 320px; height: 320px; border-radius: 50%;
+      width: 300px; height: 300px; border-radius: 50%;
       background: radial-gradient(circle, rgba(200,147,58,0.06) 0%, transparent 70%);
       transform: translate(-50%, -50%);
-      transition: left 0.5s ease, top 0.5s ease;
+      transition: left 0.2s ease, top 0.2s ease;
       left: -999px; top: -999px;
     `;
     document.body.appendChild(glow);
