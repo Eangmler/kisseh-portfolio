@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menada Haircare — Kisseh</title>
+  <meta name="description" content="How Kisseh helped build Menada Haircare's brand through creative direction, video production, photography and social media strategy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="apple-touch-icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 1.5rem var(--gutter);
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--accent); }
+    .case-hero { padding: 5rem var(--gutter) 4rem; }
+    .case-body { max-width: 780px; margin: 0 auto; padding: 4rem var(--gutter); }
+    .case-section { margin-bottom: 4rem; }
+    .case-section h3 { color: #fff; margin-bottom: 1rem; }
+    .case-section p { color: var(--text-dim); }
+    .outcome-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .outcome-item { background: var(--bg-2); border: 1px solid var(--text-faint); padding: 1.5rem; border-left: 2px solid var(--accent); }
+    .outcome-val { font-family: var(--serif); font-size: 1.8rem; color: #fff; }
+    .outcome-key { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-top: 0.3rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border: 1px solid var(--text-faint); color: var(--text-dim); }
+    .media-placeholder { width: 100%; aspect-ratio: 16/9; background: var(--bg-3); border: 1px dashed var(--text-faint); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0; color: var(--text-faint); }
+    .case-hero-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      max-height: 520px;
+      overflow: hidden;
+      border: 1px solid var(--text-faint);
+      border-radius: 4px;
+      margin-top: 3rem;
+      background: var(--bg-3);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    }
+    .case-hero-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .media-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: var(--bg-3);
+      border: 1px solid var(--text-faint);
+      border-radius: 4px;
+    }
+    .media-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+    .media-frame:hover img {
+      transform: scale(1.04);
+    }
+    @media (max-width: 680px) {
+      .media-grid { grid-template-columns: 1fr; }
+    }
+    .nav-case { position: sticky; top: 0; background: rgba(10,10,10,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--text-faint); z-index: 100; padding: 1rem var(--gutter); display: flex; align-items: center; justify-content: space-between; }
+    .nav-case-title { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
+  </style>
+</head>
+<body>
+
+<nav class="nav-case">
+  <a href="../index.html" class="back-link">← Kisseh</a>
+  <span class="nav-case-title">Case Study</span>
+</nav>
+
+<!-- HERO -->
+<div class="case-hero" style="background: var(--bg-2); border-bottom: 1px solid var(--text-faint);">
+  <div class="container">
+
+    <div class="case-hero-meta">
+      <div class="case-meta-item">
+        <label>Client</label>
+        <span>Menada Haircare</span>
+      </div>
+      <div class="case-meta-item">
+        <label>Period</label>
+        <span>January 2023 – October 2024</span>
+      </div>
+      <div class="case-meta-item">
+        <label>Role</label>
+        <span>Creative Director &amp; Social Media Manager</span>
+      </div>
+      <div class="case-meta-item">
+        <label>Sector</label>
+        <span>Beauty · E-Commerce · Brand Content</span>
+      </div>
+      <div class="case-meta-item">
+        <label>Instagram</label>
+        <span><a href="https://www.instagram.com/menada_haircare" target="_blank" rel="noopener" style="color:var(--accent);">@menada_haircare ↗</a></span>
+      </div>
+      <div class="case-meta-item">
+        <label>Live Website</label>
+        <span><a href="https://menadahaircare.com" target="_blank" rel="noopener" style="color:var(--accent);">menadahaircare.com ↗</a></span>
+      </div>
+    </div>
+
+    <h1 style="font-family: var(--serif); font-size: clamp(2.5rem, 7vw, 6rem); line-height: 0.95; color: #fff; font-weight:300;">
+      Building a Beauty Brand<br>
+      <em style="color:var(--accent);">Through Content &amp; Photography</em>
+    </h1>
+
+    <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+      <a href="https://menadahaircare.com" target="_blank" rel="noopener" class="btn btn-primary">Visit menadahaircare.com ↗</a>
+      <a href="https://www.instagram.com/menada_haircare" target="_blank" rel="noopener" class="btn btn-outline">View Instagram Content ↗</a>
+    </div>
+
+    <div class="case-hero-frame">
+      <img
+        src="../images/menada-hero.jpg"
+        alt="Menada Haircare — Product Photography and Creative Direction"
+        loading="lazy"
+      >
+    </div>
+
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="case-body">
+
+  <div class="case-section">
+    <span class="label">The Brief</span>
+    <h3>A brand at its earliest stage. A blank creative canvas.</h3>
+    <p>
+      I joined Menada Haircare as what was effectively the company's first creative hire —
+      coming in during the earliest stage of the brand's development. There was no established
+      visual identity, no content system, no audience. Just a product, a vision, and the work
+      that needed to be done.
+    </p>
+    <p>
+      My task was to build the brand's creative presence from the ground up — photography,
+      video, social strategy, and day-to-day content — while also supporting the broader
+      operational and commercial goals of the business.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Creative Direction</span>
+      <span class="tag">Social Media</span>
+      <span class="tag">Product Photography</span>
+      <span class="tag">Video Production</span>
+      <span class="tag">Brand Identity</span>
+      <span class="tag">Sales Support</span>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <span class="label">My Role</span>
+    <h3>More than a content creator. A creative co-builder.</h3>
+    <p>
+      Over 21 months, I was responsible for the full creative output of Menada's digital presence.
+      That meant planning content calendars, shooting product photographs, producing promotional videos,
+      developing campaign ideas, managing social media distribution, and writing captions that actually
+      converted interest into enquiries.
+    </p>
+    <p>
+      But it also meant understanding the business. I worked alongside the business
+      to understand what customers responded to, what drove sales, and how creative decisions
+      connected to commercial outcomes.
+    </p>
+  </div>
+
+ <div class="case-section">
+  <span class="label">Photography</span>
+
+  <h3>Product photography that communicates quality</h3>
+
+  <p>
+    Shot product and lifestyle photography to establish the brand's visual language.
+  </p>
+
+  <div class="media-grid">
+    <div class="media-frame">
+      <img
+        src="../images/menada-photo-1.jpg"
+        alt="Menada Haircare product photography"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="media-frame">
+      <img
+        src="../images/menada-photo-2.jpg"
+        alt="Menada Haircare product detail"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="media-frame">
+      <img
+        src="../images/menada-photo-3.jpg"
+        alt="Menada Haircare lifestyle photography"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</div>
+
+  <div class="case-section">
+  <span class="label">Video</span>
+
+  <h3>The video that moved the needle</h3>
+
+  <p>
+    One trend-driven promotional video produced for Menada generated a notable increase
+    in product enquiries and helped support sales during its release window.
+    The video worked because it understood the platform's native language — not just
+    showcasing the product, but framing it within a story that the target audience
+    was already engaged in.
+  </p>
+
+  <div class="instagram-embed">
+    <iframe
+      src="https://www.instagram.com/reel/C9fr9ZZinZu/embed/"
+      title="Menada Haircare — Trend-Driven Promotional Reel"
+      width="100%"
+      height="650"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+  <div class="case-section">
+    <span class="label">Deliverables</span>
+    <h3>What was produced</h3>
+    <ul style="color: var(--text-dim); font-size: 0.92rem; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+      <li>→ Product photography for e-commerce and social media</li>
+      <li>→ Social-first video content (reels, promotional clips)</li>
+      <li>→ Trend-based promotional video (drove measurable enquiry increase)</li>
+      <li>→ Content calendar planning and execution</li>
+      <li>→ Social media management (posting, engagement, community)</li>
+      <li>→ Creative concepts for ongoing campaign themes</li>
+      <li>→ Sales-oriented content and product promotions</li>
+    </ul>
+  </div>
+
+  <div class="case-section">
+    <span class="label">Outcome</span>
+    <h3>Creative work that connected to commercial results</h3>
+    <p>
+      The most significant outcome was a trend-led video that directly contributed to an
+      increase in product enquiries and sales. Beyond that specific result, 21 months of
+      consistent creative output built the brand's recognisable visual identity and
+      established a growing digital presence from nothing.
+    </p>
+    <p>
+      Exact metrics are being gathered. This section will be updated with verified campaign
+      performance data.
+    </p>
+
+    <div class="outcome-grid">
+      <div class="outcome-item">
+        <div class="outcome-val">21</div>
+        <div class="outcome-key">Months of creative work</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-val">↑</div>
+        <div class="outcome-key">Product enquiries post-video</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-val">1st</div>
+        <div class="outcome-key">Creative hire for the brand</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top: 1px solid var(--text-faint); padding-top: 3rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html#work" class="btn btn-outline">← All Work</a>
+    <a href="../index.html#contact" class="btn btn-primary">Work With Me</a>
+  </div>
+
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

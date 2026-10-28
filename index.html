@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kisseh — Creative Director · Filmmaker · Storyteller</title>
+  <meta name="description" content="Kisseh is a multidisciplinary creative based in Accra, Ghana — filmmaker, creative director, video editor, photographer, and digital strategist working with brands, artists, and organisations globally." />
+  <meta name="author" content="Kisseh" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kisseh — Creative Director · Filmmaker · Storyteller" />
+  <meta property="og:description" content="Stories. Strategy. Technology. Human Connection. Based in Accra, Ghana." />
+  <meta property="og:type" content="website" />
+  <!-- Replace this with your actual OG image once you have one -->
+  <!-- <meta property="og:image" content="images/og-image.jpg" /> -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===================================================
+     MOBILE MENU
+=================================================== -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#originals">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ===================================================
+     NAVIGATION
+=================================================== -->
+<header id="nav" role="banner">
+  <a href="/" class="nav-logo">Kisseh<span>.</span></a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#originals">Projects</a></li>
+    <li><a href="#proof">Content</a></li>
+  </ul>
+
+  <div class="nav-cta">
+    <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ===================================================
+     HERO
+=================================================== -->
+<section id="hero" aria-label="Introduction">
+  <!-- Dynamic Ambient YouTube Reel Background -->
+  <div class="hero-video-bg">
+    <div class="hero-video-iframe-wrap">
+      <iframe
+        id="heroReelIframe"
+        src=""
+        title="Kisseh Cinematic Showreel"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        tabindex="-1"
+      ></iframe>
+    </div>
+  </div>
+  <div class="hero-video-overlay"></div>
+  <div class="hero-film-scanline"></div>
+  <div class="hero-noise"></div>
+
+  <div class="hero-content">
+    <!-- Sound Status & Toggle Pill (Click empty space to toggle sound) -->
+    <div class="hero-sound-pill fade-up" id="heroSoundPill" title="Click empty space on hero to toggle sound">
+      <div class="sound-wave-bars muted" id="soundWaveIcon">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+
+    <h1 class="hero-name">
+      <em>Kisseh</em><br>
+    </h1>
+
+    <div class="hero-sub">
+      <p class="hero-roles">
+        Creative Director
+        <span>·</span>
+        Filmmaker
+        <span>·</span>
+        Visual Storyteller
+        <span>·</span>
+        Digital Strategist
+      </p>
+    </div>
+
+    <p class="hero-location" style="margin-top:1rem; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--text-dim);">
+      Stories · Strategy · Technology · Human Connection
+    </p>
+
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">See Selected Work</a>
+      <a href="#contact" class="btn btn-ghost">Let's Collaborate</a>
+    </div>
+
+    <!-- FAST SLIDE COLLAGE BLOCK -->
+    <div class="hero-collage-block fade-up">
+      <div class="collage-header">
+        <div class="collage-heading">
+          <span>●</span> Directed &amp; Captured Works · Click to Screen
+        </div>
+        <div class="collage-actions">
+          <button class="shuffle-btn" id="shuffleCollageBtn" title="Random roulette switch">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+            Shuffle Random
+          </button>
+        </div>
+      </div>
+
+      <div class="collage-carousel-wrap">
+        <div class="collage-track" id="collageTrack">
+
+          <!-- Slide: A Story of Resilience (Documentary) -->
+          <article class="collage-card" data-drive-url="https://drive.google.com/file/d/1a-ZlH1NhPYUMN2nOhMKF6CTSwX0xlrfq/preview" title="Click to screen A Story of Resilience (Documentary)">
+            <div class="collage-card-img" style="background:linear-gradient(135deg, #2b1f1d 0%, #171210 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; text-align:center;">
+              <span style="font-family:var(--serif); font-size:1.3rem; font-style:italic; color:var(--accent); line-height:1.1;">A Story of<br>Resilience</span>
+              <span style="font-family:var(--mono); font-size:0.5rem; letter-spacing:0.12em; color:var(--text-dim); margin-top:0.35rem; text-transform:uppercase;">Documentary · LLM</span>
+            </div>
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Director · Editor · Colorist</span>
+                <span class="collage-play-trigger" title="Watch full documentary in cinema modal">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">Documentary Short / LLM</div>
+                <h3 class="collage-title">A Story of Resilience</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 1: After the Last Wear -->
+          <article class="collage-card is-active" data-video-id="UvOsJ5HNprs" title="Click to screen After the Last Wear">
+            <img src="https://img.youtube.com/vi/UvOsJ5HNprs/maxresdefault.jpg" alt="After the Last Wear - Short Film" class="collage-card-img" loading="lazy">
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Director · Editor · Colorist</span>
+                <span class="collage-play-trigger" title="Watch full video with sound">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">Short Film Direction</div>
+                <h3 class="collage-title">After the Last Wear</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2: Worlasi - Wor Wor -->
+          <article class="collage-card" data-video-id="XrNkjvwJ24M" title="Click to screen Worlasi - Wor Wor">
+            <img src="https://img.youtube.com/vi/XrNkjvwJ24M/maxresdefault.jpg" alt="Worlasi - Wor Wor" class="collage-card-img" loading="lazy">
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Director · Editor · Colorist</span>
+                <span class="collage-play-trigger" title="Watch full video with sound">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">Music Video / Direction</div>
+                <h3 class="collage-title">Worlasi — Wor Wor</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3: Brabo Leone -->
+          <article class="collage-card" data-video-id="LqyhAeefkEw" title="Click to screen Brabo Leone">
+            <img src="https://img.youtube.com/vi/LqyhAeefkEw/maxresdefault.jpg" alt="Brabo Leone - Sarah Janneh" class="collage-card-img" loading="lazy">
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Cinematography · Composition</span>
+                <span class="collage-play-trigger" title="Watch full video with sound">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">International Theatre / NITE</div>
+                <h3 class="collage-title">Brabo Leone — Sarah Janneh</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 4: Senkulive - Pure Akan -->
+          <article class="collage-card" data-video-id="W3ebiLUz4dA" title="Click to screen Senkulive feat Pure Akan">
+            <img src="https://img.youtube.com/vi/W3ebiLUz4dA/maxresdefault.jpg" alt="Senkulive - Accra We Dey" class="collage-card-img" loading="lazy">
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Director · Editor · Colorist</span>
+                <span class="collage-play-trigger" title="Watch full video with sound">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">Live Music Performance</div>
+                <h3 class="collage-title">Senkulive — Accra We Dey</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 5: Rebirth - NiiSanku Dromor -->
+          <article class="collage-card" data-video-id="MdYOPwamb-c" title="Click to screen Rebirth">
+            <img src="https://img.youtube.com/vi/MdYOPwamb-c/maxresdefault.jpg" alt="Rebirth - NiiSanku Dromor" class="collage-card-img" loading="lazy">
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Director &amp; Editor</span>
+                <span class="collage-play-trigger" title="Watch full video with sound">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">Music Video</div>
+                <h3 class="collage-title">Rebirth — NiiSanku Dromor</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 6: DAB Podcast -->
+          <article class="collage-card" data-video-id="eYzMoo10ACA" title="Click to screen DAB with Dr Owoo">
+            <img src="https://img.youtube.com/vi/eYzMoo10ACA/maxresdefault.jpg" alt="DAB with Teye Kwabena Kenney" class="collage-card-img" loading="lazy">
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Director · Editor · Colorist</span>
+                <span class="collage-play-trigger" title="Watch full video with sound">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">Healthcare Media / Podcast</div>
+                <h3 class="collage-title">DAB — Dr. Owoo</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 7: Pure Akan — Nyame Mma Experience -->
+          <article class="collage-card" data-video-id="o5gsehodHkE" title="Click to screen Pure Akan — Nyame Mma Experience">
+            <img src="https://img.youtube.com/vi/o5gsehodHkE/maxresdefault.jpg" alt="Pure Akan — Nyame Mma Experience" class="collage-card-img" loading="lazy">
+            <div class="collage-card-overlay">
+              <div class="collage-card-top">
+                <span class="collage-role-badge">Co-Director &amp; Actor</span>
+                <span class="collage-play-trigger" title="Watch theatrical show with sound">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+              </div>
+              <div class="collage-card-bottom">
+                <div class="collage-category">Theatrical Concert Experience</div>
+                <h3 class="collage-title">Pure Akan — Nyame Mma Experience</h3>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ===================================================
+     STATS STRIP
+=================================================== -->
+<div id="stats" aria-label="Key numbers">
+  <div class="container">
+    <div class="stats-grid">
+
+      <div class="stat fade-up">
+        <div class="stat-num">
+          <span data-count="422" data-suffix="K+">0</span>
+        </div>
+        <div class="stat-label">Single video views (TikTok)</div>
+      </div>
+
+      <div class="stat fade-up">
+        <div class="stat-num">
+          <span data-count="414" data-suffix="K+">0</span>
+        </div>
+        <div class="stat-label">28-day video views</div>
+      </div>
+
+      <div class="stat fade-up">
+        <div class="stat-num">
+          <span data-count="4" data-suffix="+">0</span>
+        </div>
+        <div class="stat-label">Years of client work</div>
+      </div>
+
+      <div class="stat fade-up">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Countries of collaboration</div>
+      </div>
+
+      <div class="stat fade-up">
+        <div class="stat-num">
+          <span data-count="8" data-suffix="+">0</span>
+        </div>
+        <div class="stat-label">Creative disciplines</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+     SELECTED WORK
+=================================================== -->
+<section id="work" aria-labelledby="work-heading">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <span class="label">Selected Work</span>
+      <h2 id="work-heading">Telling stories<br>that <em>earn attention.</em></h2>
+    </div>
+
+    <div class="work-grid">
+
+      <!-- PROJECT 1: A STORY OF RESILIENCE (DOCUMENTARY SHORT) -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-drive-url="https://drive.google.com/file/d/1a-ZlH1NhPYUMN2nOhMKF6CTSwX0xlrfq/preview" data-video-title="A Story of Resilience — Documentary Short" data-video-role="Director · Editor · Colorist (Client: LLM)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Screen Film
+        </button>
+        <img
+  src="images/story-of-resilience.jpg"
+  alt="A Story of Resilience — Documentary Short"
+  class="project-img"
+  loading="lazy"
+>
+        <div class="project-info">
+          <div class="project-tag">Documentary Short · Directing · Editing · Color</div>
+          <h3 class="project-title">A Story of Resilience</h3>
+          <p class="project-role">Director, Editor &amp; Colorist · Client: LLM</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+        <a href="pages/story-of-resilience.html" class="stretched-link" aria-label="View A Story of Resilience case study" style="position:absolute;inset:0;"></a>
+      </article>
+
+      <!-- PROJECT 2: AFTER THE LAST WEAR -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-video-id="UvOsJ5HNprs" data-video-title="After the Last Wear — A Short Film" data-video-role="Director · Editor · Colorist">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Film
+        </button>
+        <img src="https://img.youtube.com/vi/UvOsJ5HNprs/maxresdefault.jpg" alt="After the Last Wear — A Short Film" class="project-img" loading="lazy">
+        <div class="project-info">
+          <div class="project-tag">Short Film Direction · Cinematography · Grading</div>
+          <h3 class="project-title">After the Last Wear</h3>
+          <p class="project-role">Director, Editor &amp; Colorist · Short Film</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true" data-open-cinema data-video-id="UvOsJ5HNprs" data-video-title="After the Last Wear — A Short Film" data-video-role="Director · Editor · Colorist">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </article>
+
+      <!-- PROJECT 3: WORLASI - WOR WOR -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-video-id="XrNkjvwJ24M" data-video-title="Worlasi — Wor Wor" data-video-role="Director · Editor · Colorist">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Video
+        </button>
+        <img src="https://img.youtube.com/vi/XrNkjvwJ24M/maxresdefault.jpg" alt="Worlasi — Wor Wor" class="project-img" loading="lazy">
+        <div class="project-info">
+          <div class="project-tag">Music Video Direction · Visual Narrative</div>
+          <h3 class="project-title">Worlasi — Wor Wor</h3>
+          <p class="project-role">Director, Editor &amp; Colorist · Official Release</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true" data-open-cinema data-video-id="XrNkjvwJ24M" data-video-title="Worlasi — Wor Wor" data-video-role="Director · Editor · Colorist">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </article>
+
+      <!-- PROJECT 4: BRABO LEONE (NITE) -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-video-id="LqyhAeefkEw" data-video-title="Brabo Leone — Sarah Janneh (NITE)" data-video-role="Cinematography · Composition · Lyrics">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Video
+        </button>
+        <img src="https://img.youtube.com/vi/LqyhAeefkEw/maxresdefault.jpg" alt="Brabo Leone — Sarah Janneh (NITE)" class="project-img" loading="lazy">
+        <div class="project-info">
+          <div class="project-tag">International Production · Netherlands · NITE</div>
+          <h3 class="project-title">Brabo Leone — Sarah Janneh</h3>
+          <p class="project-role">Cinematography, Music Composition &amp; Lyricist</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+        <a href="pages/brabo-leone.html" class="stretched-link" aria-label="View Brabo Leone case study" style="position:absolute;inset:0;"></a>
+      </article>
+
+      <!-- PROJECT 5: APHRO — PRODUCT & VISUALS -->
+      <article class="project-card has-img fade-up">
+        <img
+  src="images/aphro-photo-1.jpg"
+  alt="APHRO — Product Photography and Brand Visuals"
+  class="project-img"
+  loading="lazy"
+>
+        <div class="project-info">
+          <div class="project-tag">Product Photography · Human Elements · Ad Videos</div>
+          <h3 class="project-title">APHRO — Brand Imagery</h3>
+          <p class="project-role">Product Photographer &amp; Video Director · Live on aphroghana.com</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+        <a href="pages/aphro.html" class="stretched-link" aria-label="View APHRO case study" style="position:absolute;inset:0;"></a>
+      </article>
+
+      <!-- PROJECT 6: FLOKEFAMA — WEBSITE REDESIGN & IT -->
+      <article class="project-card has-img fade-up">
+        <img
+  src="images/flokefama.jpg"
+  alt="FLOKEFAMA — Website Redesign and Operations"
+  class="project-img"
+  loading="lazy"
+>
+        <div class="project-info">
+          <div class="project-tag">Website Redesign · Content · IT &amp; Media Production</div>
+          <h3 class="project-title">FLOKEFAMA Company Limited</h3>
+          <p class="project-role">Lead Redesign, Content Manager &amp; IT Administrator</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+        <a href="pages/flokefama.html" class="stretched-link" aria-label="View FLOKEFAMA case study" style="position:absolute;inset:0;"></a>
+      </article>
+
+      <!-- PROJECT 7: MENADA HAIRCARE -->
+      <article class="project-card has-img fade-up">
+        <img
+  src="images/menada-hero.jpg"
+  alt="Menada Haircare — Brand Visuals and Social Media Content"
+  class="project-img"
+  loading="lazy"
+>
+        <div class="project-info">
+          <div class="project-tag">Product &amp; Lifestyle Photography · Social Media Management</div>
+          <h3 class="project-title">Menada Haircare</h3>
+          <p class="project-role">Creative Director, Photographer &amp; Social Manager</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+        <a href="pages/menada.html" class="stretched-link" aria-label="View Menada Haircare case study" style="position:absolute;inset:0;"></a>
+      </article>
+
+      <!-- PROJECT 8: CELLO RESTAURANT ACCRA -->
+      <article class="project-card has-img fade-up">
+        <img
+  src="images/cello.jpg"
+  alt="Cello Restaurant Accra — Hospitality and Social Media Content"
+  class="project-img"
+  loading="lazy"
+>
+        <div class="project-info">
+          <div class="project-tag">Hospitality · Social Media Content · 2025</div>
+          <h3 class="project-title">Cello Restaurant Accra</h3>
+          <p class="project-role">Instagram Content Manager &amp; Visual Storyteller</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+        <a href="pages/cello.html" class="stretched-link" aria-label="View Cello Restaurant case study" style="position:absolute;inset:0;"></a>
+      </article>
+
+      <!-- PROJECT 9: SENKULIVE - PURE AKAN -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-video-id="W3ebiLUz4dA" data-video-title="Senkulive — Accra We Dey (feat. Pure Akan & Aduberks)" data-video-role="Director · Editor · Colorist">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Session
+        </button>
+        <img src="https://img.youtube.com/vi/W3ebiLUz4dA/maxresdefault.jpg" alt="Senkulive — Accra We Dey" class="project-img" loading="lazy">
+        <div class="project-info">
+          <div class="project-tag">Live Music Film · Cultural Performance</div>
+          <h3 class="project-title">Senkulive — Accra We Dey</h3>
+          <p class="project-role">Director, Editor &amp; Colorist (feat. Pure Akan &amp; Aduberks)</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true" data-open-cinema data-video-id="W3ebiLUz4dA" data-video-title="Senkulive — Accra We Dey (feat. Pure Akan & Aduberks)" data-video-role="Director · Editor · Colorist">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </article>
+
+      <!-- PROJECT 10: DAB PODCAST -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-video-id="eYzMoo10ACA" data-video-title="Diagnostics & Beyond (DAB) — Dr. Owoo" data-video-role="Director · Editor · Colorist">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Episode
+        </button>
+        <img src="https://img.youtube.com/vi/eYzMoo10ACA/maxresdefault.jpg" alt="DAB with Teye Kwabena Kenney" class="project-img" loading="lazy">
+        <div class="project-info">
+          <div class="project-tag">Healthcare Podcast · Video Production · FLOKEFAMA</div>
+          <h3 class="project-title">DAB — Diagnostics &amp; Beyond</h3>
+          <p class="project-role">Director, Editor &amp; Colorist (Host: Teye Kwabena Kenney)</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+        <a href="pages/dab.html" class="stretched-link" aria-label="View DAB podcast case study" style="position:absolute;inset:0;"></a>
+      </article>
+
+      <!-- PROJECT 11: REBIRTH - NIISANKU DROMOR -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-video-id="MdYOPwamb-c" data-video-title="Rebirth — NiiSanku Dromor" data-video-role="Director & Editor">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Video
+        </button>
+        <img src="https://img.youtube.com/vi/MdYOPwamb-c/maxresdefault.jpg" alt="Rebirth — NiiSanku Dromor" class="project-img" loading="lazy">
+        <div class="project-info">
+          <div class="project-tag">Music Video Production · Directing</div>
+          <h3 class="project-title">Rebirth — NiiSanku Dromor</h3>
+          <p class="project-role">Director &amp; Editor · Official Music Video</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true" data-open-cinema data-video-id="MdYOPwamb-c" data-video-title="Rebirth — NiiSanku Dromor" data-video-role="Director & Editor">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </article>
+
+      <!-- PROJECT 12: PURE AKAN — NYAME MMA EXPERIENCE -->
+      <article class="project-card has-img fade-up">
+        <button class="project-card-video-trigger" data-open-cinema data-video-id="o5gsehodHkE" data-video-title="Pure Akan — Nyame Mma Experience (2023)" data-video-role="Co-Director &amp; Actor">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Show
+        </button>
+        <img src="https://img.youtube.com/vi/o5gsehodHkE/maxresdefault.jpg" alt="Pure Akan — Nyame Mma Experience" class="project-img" loading="lazy">
+        <div class="project-info">
+          <div class="project-tag">Theatrical Concert Experience · Directing &amp; Performance</div>
+          <h3 class="project-title">Pure Akan — Nyame Mma Experience</h3>
+          <p class="project-role">Co-Director &amp; Actor · 2023 Live Theatrical Show</p>
+        </div>
+        <div class="project-arrow" aria-hidden="true" data-open-cinema data-video-id="o5gsehodHkE" data-video-title="Pure Akan — Nyame Mma Experience (2023)" data-video-role="Co-Director &amp; Actor">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </article>
+
+    </div><!-- /work-grid -->
+
+  </div>
+</section>
+
+<!-- ===================================================
+     ABOUT
+=================================================== -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-portrait fade-up">
+        <div class="portrait-frame">
+          <img src="images/ernest-portrait.jpg" alt="Ernest Kisseh-Angmler — Creative Director &amp; Filmmaker" class="portrait-img">
+          <div class="portrait-credit">Ernest Kisseh-Angmler · Accra, Ghana</div>
+        </div>
+      </div>
+
+      <div class="about-text fade-up">
+        <span class="label">About Me</span>
+        <h2 id="about-heading">Stories first.<br>Always.</h2>
+        <div class="divider"></div>
+
+        <div class="about-body">
+          <p>
+            I've always been curious about why people do what they do. That curiosity has taken me through theatre,
+            filmmaking, photography, music, creative strategy, and the systems that hold organisations together.
+          </p>
+
+          <blockquote class="big-quote">
+            "Sometimes that curiosity becomes a film. Sometimes it's a campaign, a song, or just a conversation
+            that changes how someone sees themselves."
+          </blockquote>
+
+          <p>
+            I studied Theatre Arts at the <strong>University of Ghana</strong>, where performance became my first
+            real language for communication. That foundation — understanding how to hold an audience, how to
+            move a story forward, how to make people feel something — runs through everything else I do.
+          </p>
+
+          <p>
+            Since then I've worked as a <strong>creative director</strong> for emerging brands, produced a healthcare
+            podcast from concept to launch, shot and edited music videos, and contributed original
+            songs to an internationally staged theatrical production in the Netherlands.
+          </p>
+
+          <p>
+            I'm also the creator of <strong>Think Out Loud with Kisseh</strong> — a developing conversation
+            series built around one question: <em>What makes people think the way they do?</em>
+          </p>
+
+          <p>
+            Whether I'm behind a camera, in an editing suite, on stage, or deep inside a creative brief —
+            the work is always about connecting ideas to the people they were made for.
+          </p>
+        </div>
+
+        <div class="about-details">
+          <div class="about-detail-item">
+            <h4>Based</h4>
+            <p>Accra, Ghana<br>Available globally</p>
+          </div>
+          <div class="about-detail-item">
+            <h4>Education</h4>
+            <p>Theatre Arts &amp; Economics<br>University of Ghana</p>
+          </div>
+          <div class="about-detail-item">
+            <h4>Primary Editing Tool</h4>
+            <p>DaVinci Resolve</p>
+          </div>
+          <div class="about-detail-item">
+            <h4>Languages</h4>
+            <p>English · Ewe (elements)</p>
+          </div>
+          <div class="about-detail-item">
+            <h4>Production Brand</h4>
+            <p>DEMIMAGE</p>
+          </div>
+          <div class="about-detail-item">
+            <h4>Original Series</h4>
+            <p>Think Out Loud with Kisseh</p>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="#work" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     SERVICES
+=================================================== -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">What I Do</span>
+      <h2 id="services-heading">Services &amp;<br><em>Expertise</em></h2>
+      <p class="text-dim" style="margin-top:1.5rem; font-size:1rem;">
+        I work with brands, artists, filmmakers, and organisations who need more than executers —
+        they need someone who thinks creatively and understands the strategy behind the work.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-item fade-up">
+        <div class="service-num">01</div>
+        <h3 class="service-title">Creative Direction &amp; Brand Architecture</h3>
+        <p class="service-desc">
+          From campaign ideation through to final execution. I develop visual concepts, content strategies,
+          and brand identities that are rooted in your audience's actual experience — building cohesive worlds across digital, video, and physical touchpoints.
+        </p>
+        <div class="service-tools">
+          <span class="service-tool">Creative Direction</span>
+          <span class="service-tool">Campaign Strategy</span>
+          <span class="service-tool">Brand Identity</span>
+          <span class="service-tool">Visual Concepts</span>
+        </div>
+      </div>
+
+      <div class="service-item fade-up">
+        <div class="service-num">02</div>
+        <h3 class="service-title">Video Production, Editing &amp; Color Grading</h3>
+        <p class="service-desc">
+          Commercial videos, brand films, music videos, healthcare podcasts, short-form viral reels,
+          and documentary storytelling. Primary editor and colorist in DaVinci Resolve — from rough cut to final cinema grade.
+        </p>
+        <div class="service-tools">
+          <span class="service-tool">DaVinci Resolve</span>
+          <span class="service-tool">Color Grading</span>
+          <span class="service-tool">Directing</span>
+          <span class="service-tool">Short-Form</span>
+        </div>
+      </div>
+
+      <div class="service-item fade-up">
+        <div class="service-num">03</div>
+        <h3 class="service-title">Website Design, Web Apps &amp; Digital Management</h3>
+        <p class="service-desc">
+          Bespoke digital design, engineering, and continuous management. From comprehensive corporate redesigns (<a href="https://flokefama.com" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">flokefama.com</a>) and high-performance interactive portfolios to custom enterprise tools (<a href="https://flokefama-os.web.app" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">FlokeOS</a> business operating system) and housing platforms (safuia). Clean code, modern aesthetics, zero bloat.
+        </p>
+        <div class="service-tools">
+          <span class="service-tool">Website Redesign</span>
+          <span class="service-tool">Web App Development</span>
+          <span class="service-tool">flokefama.com</span>
+          <span class="service-tool">FlokeOS Web App</span>
+          <span class="service-tool">safuia</span>
+          <span class="service-tool">Content Management</span>
+        </div>
+      </div>
+
+      <div class="service-item fade-up">
+        <div class="service-num">04</div>
+        <h3 class="service-title">Photography &amp; Visual Content</h3>
+        <p class="service-desc">
+          Product, brand, and editorial photography combining clean standalone aesthetics with human elements. Live visual suites produced for luxury craft beverage brands (<a href="https://www.aphroghana.com" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">aphroghana.com</a>) and beauty e-commerce (<a href="https://menadahaircare.com" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">menadahaircare.com</a>).
+        </p>
+        <div class="service-tools">
+          <span class="service-tool">Product Photography</span>
+          <span class="service-tool">Human Elements</span>
+          <span class="service-tool">Brand Imagery</span>
+          <span class="service-tool">Studio &amp; Location</span>
+        </div>
+      </div>
+
+      <div class="service-item fade-up">
+        <div class="service-num">05</div>
+        <h3 class="service-title">Social Media &amp; Digital Growth Strategy</h3>
+        <p class="service-desc">
+          Content calendars, platform strategy, community management, and organic performance analysis.
+          Backed by real audience proof — including content that has reached over 400,000 organic viewers on TikTok and full visual management for premier venues like Cello Restaurant Accra.
+        </p>
+        <div class="service-tools">
+          <span class="service-tool">TikTok (400K+ Organic)</span>
+          <span class="service-tool">Instagram Management</span>
+          <span class="service-tool">Content Calendars</span>
+          <span class="service-tool">Audience Growth</span>
+        </div>
+      </div>
+
+      <div class="service-item fade-up">
+        <div class="service-num">06</div>
+        <h3 class="service-title">Film, Theatre Directing &amp; Music Production</h3>
+        <p class="service-desc">
+          Stage directing, acting, musical composition, and creative development. Highlights include co-directing and acting in Pure Akan's theatrical concert <em>Nyame Mma Experience</em> (2023), cinematography &amp; songwriting for NITE Netherlands (<em>Brabo Leone</em>), and collaborative songwriting on Dzidzor's <em>Wilderness</em> EP.
+        </p>
+        <div class="service-tools">
+          <span class="service-tool">Stage Directing</span>
+          <span class="service-tool">Acting</span>
+          <span class="service-tool">Pure Akan Show</span>
+          <span class="service-tool">Dzidzor 'Wilderness'</span>
+          <span class="service-tool">NITE Netherlands</span>
+        </div>
+      </div>
+
+      <div class="service-item fade-up">
+        <div class="service-num">07</div>
+        <h3 class="service-title">Digital Operations &amp; Google Workspace</h3>
+        <p class="service-desc">
+          IT systems administration, Google Workspace enterprise management, endpoint security with Scalefusion, and automated operational workflows. Practical expertise ensuring teams operate securely and efficiently.
+        </p>
+        <div class="service-tools">
+          <span class="service-tool">Google Workspace</span>
+          <span class="service-tool">Scalefusion MDM</span>
+          <span class="service-tool">Cloud Workflows</span>
+          <span class="service-tool">Digital Ops</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:3rem; text-align:center;" class="fade-up">
+      <a href="#contact" class="btn btn-primary">Enquire About a Project</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================
+     ORIGINAL PROJECTS
+=================================================== -->
+<section id="originals" aria-labelledby="originals-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">Original Work</span>
+      <h2 id="originals-heading">Building something<br><em>of my own.</em></h2>
+      <p class="text-dim" style="margin-top:1.5rem; font-size:1rem; max-width:55ch;">
+        Beyond client work, I'm developing original creative intellectual property under
+        <strong style="color:var(--text)">DEMIMAGE</strong> — my production brand.
+      </p>
+    </div>
+
+    <div class="originals-grid">
+
+      <!-- THINK OUT LOUD -->
+      <div class="original-card fade-up">
+        <div class="original-bg">TOL</div>
+        <div class="original-info">
+          <span class="original-status development">In Development</span>
+          <h3 class="original-title">Think Out Loud<br>with Kisseh</h3>
+          <p class="original-desc">
+            A conversation and documentary series exploring the hidden thinking behind people's
+            decisions, careers, and identities. Not just interviews — reverse-engineered human stories.
+          </p>
+          <div style="margin-top:1.5rem;">
+            <a href="pages/think-out-loud.html" class="btn btn-ghost">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEMIMAGE -->
+      <div class="original-card fade-up">
+        <div class="original-bg">DEM</div>
+        <div class="original-info">
+          <span class="original-status development">Production Brand</span>
+          <h3 class="original-title">DEMIMAGE</h3>
+          <p class="original-desc">
+            Kisseh's media and production company — the creative home for original films,
+            series, and storytelling projects. Building intellectual property rooted in
+            African stories and global ideas.
+          </p>
+          <div style="margin-top:1.5rem;">
+            <a href="#contact" class="btn btn-ghost">Collaborate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOKEOS ENTERPRISE OPERATING SYSTEM -->
+      <div class="original-card fade-up">
+        <div class="original-bg">OS</div>
+        <div class="original-info">
+          <span class="original-status development">Enterprise Web App</span>
+          <h3 class="original-title">FlokeOS</h3>
+          <p class="original-desc">
+            A full company operating system designed for streamlined task management, internal workflows, and executive reporting. Custom built, deployed, and available to explore live.
+          </p>
+          <div style="margin-top:1.5rem;">
+            <a href="https://flokefama-os.web.app" target="_blank" rel="noopener" class="btn btn-ghost">Explore Live App ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAFUIA -->
+      <div class="original-card fade-up">
+        <div class="original-bg">saf</div>
+        <div class="original-info">
+          <span class="original-status development">Venture · Early Stage</span>
+          <h3 class="original-title">safuia</h3>
+          <p class="original-desc">
+            A housing discovery startup focused on making it easier to find rooms and short-stay
+            accommodation — starting in Accra, Ghana. Concept, brand direction and
+            early-stage development.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     PROOF — TIKTOK / CONTENT
+=================================================== -->
+<section id="proof" aria-labelledby="proof-heading">
+  <div class="container">
+    <div class="proof-grid">
+
+      <div class="fade-up">
+        <span class="label">Audience Proof</span>
+        <h2 id="proof-heading">Content that earns<br><em>real attention.</em></h2>
+        <div class="divider"></div>
+        <p style="color:var(--text-dim);">
+          These aren't boosted ads. This is organic reach — built through consistent storytelling,
+          a distinctive point of view, and content that makes people stop and think twice.
+        </p>
+        <p style="color:var(--text-dim); margin-top:1em;">
+          My TikTok content explores human behaviour, relationships, identity, and
+          the questions most people feel but struggle to articulate. The numbers below are from
+          a 28-day analytics window (August 2026).
+        </p>
+
+        <div class="proof-videos" style="margin-top:2.5rem;">
+
+          <div class="proof-video-item">
+            <div class="proof-video-thumb">
+              <img src="images/marraigethumb.png" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="proof-video-info">
+              <div class="proof-video-topic">Building with a partner vs. just enjoying them</div>
+              <div class="proof-video-views">≈ 422,000 views</div>
+            </div>
+          </div>
+
+          <div class="proof-video-item">
+            <div class="proof-video-thumb">
+              <img src="images/lovepeacethumb.png" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="proof-video-info">
+              <div class="proof-video-topic">Love proven in peace or presence</div>
+              <div class="proof-video-views">≈ 272,000 views · 25K likes · 7.3K shares</div>
+            </div>
+          </div>
+
+          <div class="proof-video-item">
+            <div class="proof-video-thumb">
+              <img src="images/lifethumb.png" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="proof-video-info">
+              <div class="proof-video-topic">Relationship preparation and adulthood</div>
+              <div class="proof-video-views">≈ 123,000 views</div>
+            </div>
+          </div>
+
+          <div class="proof-video-item">
+            <div class="proof-video-thumb">
+              <img src="images/sexthumb.png" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="proof-video-info">
+              <div class="proof-video-topic">Avoidance and perceived needs</div>
+              <div class="proof-video-views">≈ 112,000 views</div>
+            </div>
+          </div>
+
+          <div style="margin-top:0.5rem;">
+            <a href="https://www.tiktok.com/@kisseh_" target="_blank" rel="noopener" class="btn btn-ghost">
+              Follow on TikTok ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-metrics fade-up">
+
+        <div class="metric-card featured">
+          <div class="metric-val"><span data-count="414" data-suffix="K+">0</span></div>
+          <div class="metric-label">Video views in 28 days</div>
+          <div class="metric-note">TikTok · Aug 2026 analytics window</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-val"><span data-count="41.3" data-suffix="K">0</span></div>
+          <div class="metric-label">Likes (28 days)</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-val"><span data-count="8.5" data-suffix="K">0</span></div>
+          <div class="metric-label">Shares (28 days)</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-val"><span data-count="422" data-suffix="K">0</span></div>
+          <div class="metric-label">Single video peak views</div>
+          <div class="metric-note">Organic, For You feed traffic</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-val"><span data-count="897">0</span></div>
+          <div class="metric-label">New followers from one video</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-val"><span data-count="497">0</span></div>
+          <div class="metric-label">Comments on one video</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     TESTIMONIALS PLACEHOLDER
+=================================================== -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">What People Say</span>
+      <h2 id="testimonials-heading">From the people<br><em>I've worked with.</em></h2>
+    </div>
+
+    <div class="testimonial-placeholder fade-up">
+      <div class="ph-label">Testimonials · Coming Soon</div>
+      <p>
+        "Client and collaborator testimonials will appear here once permissions are confirmed.
+        This space is reserved for real words from real people."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     CONTACT
+=================================================== -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-intro fade-up">
+        <span class="label">Let's Work Together</span>
+        <h2 id="contact-heading">Got a story<br>that needs<br><em>telling?</em></h2>
+
+        <p>
+          I'm available for commercial video projects, creative direction, photography,
+          social media strategy, Google Workspace implementation, and creative collaborations
+          with brands, artists, and organisations — globally.
+        </p>
+
+        <p style="margin-top:1em; color:var(--text-dim);">
+          Based in Accra, Ghana. Working with clients in the US, UK, and across Africa.
+        </p>
+
+        <div class="contact-options">
+
+          <div class="contact-opt">
+            <div class="contact-opt-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-opt-label">Email</div>
+              <div class="contact-opt-value">
+                <a href="mailto:ernestangmler144@gmail.com">ernestangmler144@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-opt">
+            <div class="contact-opt-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div>
+              <div class="contact-opt-label">Instagram</div>
+              <div class="contact-opt-value">
+                <a href="https://www.instagram.com/kisse.h/" target="_blank" rel="noopener">@kisse.h</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-opt">
+            <div class="contact-opt-icon" aria-hidden="true">
+              <!-- TikTok Icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.27 8.27 0 0 0 4.84 1.56V6.79a4.85 4.85 0 0 1-1.07-.1z"/></svg>
+            </div>
+            <div>
+              <div class="contact-opt-label">TikTok</div>
+              <div class="contact-opt-value">
+                <a href="https://www.tiktok.com/@kisseh_" target="_blank" rel="noopener">@kisseh_</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-opt">
+            <div class="contact-opt-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-opt-label">LinkedIn</div>
+              <div class="contact-opt-value">
+                <a href="https://www.linkedin.com/in/ernest-angmler-1a2012153/" target="_blank" rel="noopener">Ernest Angmler ↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form fade-up">
+        <h4>Send a Direct Message</h4>
+
+        <!--
+          This form works with Netlify's built-in form handling.
+          When you deploy to Netlify, they automatically capture submissions.
+          You don't need a backend or any code!
+        -->
+        <form
+          id="contactForm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          aria-label="Contact form"
+        >
+          <!-- Anti-spam (hidden) -->
+          <p style="display:none;">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
+          <input type="hidden" name="form-name" value="contact">
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Smith" autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="john@company.com" autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="project-type">What do you need?</label>
+            <select id="project-type" name="project-type">
+              <option value="">— Select a service —</option>
+              <option>Website Design, Web Apps &amp; Digital Management</option>
+              <option>Creative Direction &amp; Brand Storytelling</option>
+              <option>Video Production &amp; Editing</option>
+              <option>Photography</option>
+              <option>Social Media &amp; Digital Strategy</option>
+              <option>Film / Theatre</option>
+              <option>Google Workspace / Digital Operations</option>
+              <option>General Collaboration</option>
+              <option>Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Approx. budget (USD)</label>
+            <select id="budget" name="budget">
+              <option value="">— I'd rather not say —</option>
+              <option>Under $500</option>
+              <option>$500 – $1,500</option>
+              <option>$1,500 – $5,000</option>
+              <option>$5,000+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell me about your project</label>
+            <textarea id="message" name="message" required placeholder="Describe what you're building, the story you need to tell, or the problem you're trying to solve…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+            Send Message
+          </button>
+          <p id="formMsg" style="margin-top:1rem; font-size:0.85rem; min-height:1.2em;"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     FOOTER
+=================================================== -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-logo">Kisseh<span>.</span></div>
+
+      <ul class="footer-links" role="list">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#originals">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-social" aria-label="Social media links">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/kisse.h/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@kisseh_" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.27 8.27 0 0 0 4.84 1.56V6.79a4.85 4.85 0 0 1-1.07-.1z"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/ernest-angmler-1a2012153/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Kisseh · All rights reserved ·
+      <a href="#" style="color:inherit;">DEMIMAGE</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================================================
+     CINEMA LIGHTBOX MODAL
+=================================================== -->
+<div class="cinema-modal" id="cinemaModal" role="dialog" aria-modal="true" aria-label="Cinema Screening Player">
+  <div class="cinema-modal-inner">
+    <button class="cinema-close-btn" id="cinemaCloseBtn" aria-label="Close cinema modal">✕</button>
+    <div class="cinema-video-container">
+      <iframe
+        id="cinemaModalIframe"
+        src=""
+        title="Kisseh Work Screening"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="cinema-meta">
+      <div>
+        <h3 class="cinema-title" id="cinemaTitle">After the Last Wear</h3>
+        <p class="cinema-roles" id="cinemaRoles">Director · Editor · Colorist</p>
+      </div>
+      <a href="#contact" class="btn btn-primary" onclick="closeCinemaModal()">Enquire For Similar Project</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

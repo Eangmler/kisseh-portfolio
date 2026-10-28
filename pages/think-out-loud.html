@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Think Out Loud with Kisseh — Kisseh</title>
+  <meta name="description" content="Think Out Loud with Kisseh — an original conversation and documentary series exploring the hidden thinking behind people's decisions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="apple-touch-icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .nav-case{position:sticky;top:0;background:rgba(10,10,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--text-faint);z-index:100;padding:1rem var(--gutter);display:flex;align-items:center;justify-content:space-between}
+    .nav-case-title{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
+    .back-link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);transition:color var(--transition)}
+    .back-link:hover{color:var(--accent)}
+    .tol-hero{min-height:80vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6rem var(--gutter) 5rem;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(200,147,58,.08) 0%,transparent 70%),var(--bg-2);position:relative;border-bottom:1px solid var(--text-faint)}
+    .tol-hero::before{content:'TOL';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:30vw;color:rgba(255,255,255,.02);pointer-events:none;user-select:none;line-height:1}
+    .case-body{max-width:780px;margin:0 auto;padding:4rem var(--gutter)}
+    .case-section{margin-bottom:4rem}
+    .case-section h3{color:#fff;margin-bottom:1rem}
+    .case-section p{color:var(--text-dim)}
+    .media-placeholder{width:100%;aspect-ratio:16/9;background:var(--bg-3);border:1px dashed var(--text-faint);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;margin:1.5rem 0;color:var(--text-faint)}
+    .media-placeholder span{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:0 1rem}
+    .ep-card{background:var(--bg-2);border:1px solid var(--text-faint);padding:2rem;margin-bottom:1px;transition:border-color var(--transition)}
+    .ep-card:hover{border-color:var(--accent)}
+    .ep-num{font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+    .ep-title{font-family:var(--serif);font-size:1.5rem;color:#fff;margin-bottom:.5rem}
+    .ep-guest{font-size:.85rem;color:var(--text-dim)}
+    .ep-q{font-style:italic;color:var(--text-dim);margin-top:.75rem;font-size:.92rem;padding-left:1rem;border-left:1px solid var(--accent)}
+    .ep-status{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border:1px solid;margin-top:1rem}
+    .ep-status.dev{color:var(--accent);border-color:var(--accent)}
+    .ep-status.planned{color:var(--text-faint);border-color:var(--text-faint)}
+    .philosophy-block{background:var(--bg-2);border:1px solid var(--text-faint);border-left:2px solid var(--accent);padding:2.5rem;margin:2rem 0}
+    .philosophy-block p{color:var(--text);font-family:var(--serif);font-size:1.2rem;font-style:italic;line-height:1.6;max-width:none}
+  </style>
+</head>
+<body>
+
+<nav class="nav-case">
+  <a href="../index.html" class="back-link">← Kisseh</a>
+  <span class="nav-case-title">Original Series</span>
+</nav>
+
+<div class="tol-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <span style="font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1.5rem;">
+      A DEMIMAGE Original Series · In Development
+    </span>
+    <h1 style="font-family:var(--serif);font-size:clamp(3rem,8vw,7rem);line-height:.9;color:#fff;font-weight:300;">
+      Think Out<br><em style="color:var(--accent);">Loud</em>
+    </h1>
+    <p style="font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim);margin-top:1rem;">
+      with Kisseh
+    </p>
+    <p style="margin-top:2rem;font-size:1.1rem;color:var(--text-dim);max-width:52ch;line-height:1.7;">
+      A conversation and documentary series exploring the hidden thinking behind
+      people's decisions, careers, identities, and lives. Not just what people do —
+      but <em style="color:var(--text);">why they do it.</em>
+    </p>
+  </div>
+</div>
+
+<div class="case-body">
+
+  <div class="case-section">
+    <span class="label">The Idea</span>
+    <h3>Reverse-engineering how people think</h3>
+    <p>
+      Most interviews ask <em>what</em>. Think Out Loud asks <em>why</em>.
+    </p>
+    <p>
+      The series is built around one persistent question: what is the hidden thinking
+      behind the decisions people make? Not the polished version of events someone gives
+      at a press conference — but the actual reasoning, the fears, the values, the moments
+      that changed things. The thinking underneath the story.
+    </p>
+    <p>
+      Each conversation is designed to go somewhere unexpected. Not through confrontation,
+      but through genuine curiosity — the kind that comes from someone who has already spent
+      time understanding the other person's world.
+    </p>
+
+    <div class="philosophy-block">
+      <p>
+        "Understanding the hidden thinking behind people's decisions."
+      </p>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <span class="label">Format</span>
+    <h3>Conversations with cinematic DNA</h3>
+    <p>
+      Think Out Loud is not a conventional podcast. It combines personal conversation,
+      documentary storytelling, psychological and philosophical questioning,
+      and cinematic visual storytelling. The intention is for each episode to feel like
+      a film that also happens to be a conversation.
+    </p>
+    <p>
+      The show draws on existing relationships — guests are people Kisseh knows, has learned from,
+      or has watched navigate their lives in ways worth examining. That intimacy changes the
+      quality of the conversation.
+    </p>
+  </div>
+
+  <div class="case-section">
+    <span class="label">Episodes</span>
+    <h3>Who we're talking to</h3>
+
+    <div class="ep-card">
+      <div class="ep-num">Episode 01</div>
+      <div class="ep-title">Kwabena Owusu Adjei (Kwabs)</div>
+      <div class="ep-guest">Mentor · Entrepreneur · Community Builder</div>
+      <div class="ep-q">"Why Me? — The thinking behind choosing to help other people."</div>
+      <span class="ep-status dev">In Development · Conversation Recorded</span>
+    </div>
+
+    <div class="ep-card">
+      <div class="ep-num">Episode 02</div>
+      <div class="ep-title">Ms. Roberta Gardner</div>
+      <div class="ep-guest">Voice &amp; Speech Lecturer · University of Ghana</div>
+      <div class="ep-q">"What does your voice reveal about who you are?"</div>
+      <span class="ep-status planned">Planned</span>
+    </div>
+
+    <p style="margin-top:1.5rem;font-size:.85rem;color:var(--text-faint);font-family:var(--mono);">
+      Further prospective guests include musicians, actors, entrepreneurs, strategists,
+      and cultural figures — all selected for the depth of their thinking, not just their profile.
+    </p>
+  </div>
+
+  <div class="case-section">
+    <span class="label">Trailer</span>
+    <h3>A first look at the series</h3>
+    <div class="media-placeholder">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      <span>Embed the Think Out Loud trailer here<br>YouTube iframe or direct video file</span>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <span class="label">Production Brand</span>
+    <h3>A DEMIMAGE Original Production</h3>
+    <p>
+      Think Out Loud is the flagship original series of <strong style="color:#fff">DEMIMAGE</strong>,
+      Kisseh's creative production brand. The show is designed to be the first of many original
+      media properties — content owned and developed from Ghana, for audiences everywhere.
+    </p>
+  </div>
+
+  <div style="border-top:1px solid var(--text-faint);padding-top:3rem;display:flex;flex-wrap:wrap;gap:1rem;">
+    <a href="../index.html" class="btn btn-outline">← Back Home</a>
+    <a href="../index.html#contact" class="btn btn-primary">Collaborate on the Series</a>
+  </div>
+
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>
