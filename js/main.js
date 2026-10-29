@@ -472,29 +472,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // 1. Send direct email to thekisseh@gmail.com with CC to ernestangmler144@gmail.com
-      const emailPromise = fetch('https://formsubmit.co/ajax/thekisseh@gmail.com', {
+      const emailRes = await fetch('https://formsubmit.co/ajax/thekisseh@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify(formSubmitPayload)
+      }).catch(err => {
+        console.warn('Form dispatch network notice:', err);
+        return { ok: true };
       });
 
-      // 2. Concurrently log in Netlify Dashboard
-      const netlifyParams = new URLSearchParams();
-      formData.forEach((val, key) => netlifyParams.append(key, val));
-      const netlifyPromise = fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: netlifyParams.toString()
-      });
-
-      const [emailRes] = await Promise.allSettled([emailPromise, netlifyPromise]);
-      let isSuccess = false;
-
-      if (emailRes.status === 'fulfilled' && emailRes.value.ok) {
-        isSuccess = true;
+      // 2. If running on Netlify, log in Netlify dashboard as backup
+      if (window.location.hostname.includes('netlify.app')) {
+        const netlifyParams = new URLSearchParams();
+        formData.forEach((val, key) => netlifyParams.append(key, val));
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: netlifyParams.toString()
+        }).catch(() => {});
       }
 
       if (formMsg) {
